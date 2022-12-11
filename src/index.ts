@@ -19,10 +19,11 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY!; // Read the README for how to set 
     const tx = await collection.mint({
       name: "My 3D Cube NFT",
       description: "This NFT gets loaded in the Unity game at run time!",
+      // This URL points to a Unity AssetBundle hosted on IPFS.
       image: "ipfs://QmZGU4nEJKpD5DLhbcTr2fi79ZZatXg59ir1gbaBenP48e",
     });
 
-    console.log(tx);
+    console.log("🎉 Successfully minted NFT!");
   } catch (e) {
     console.error(e);
   }

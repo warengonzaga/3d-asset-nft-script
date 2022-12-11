@@ -1,13 +1,13 @@
-# Pack Creation Script
+# 3D Asset NFTs
 
-A simple script to demonstrate how to bundle NFTs into packs for the [Pack](https://portal.thirdweb.com/sdk/interacting-with-contracts/pack) contract.
+A simple script to demonstrate how to create 3D asset NFTs (or any NFTs that point to custom metadata) using the [SDK](https://portal.thirdweb.com/sdk).
 
 ## How to Use This Script
 
 1. Create a copy of this template on your local machine:
 
 ```bash
-npx thirdweb@latest create --template pack-creation-script
+npx thirdweb@latest create --template 3d-asset-nft-script
 ```
 
 2. Setup your private key to sign transactions:
@@ -24,9 +24,7 @@ PRIVATE_KEY=xxx
 
 3. In the [index.ts](./src/index.ts) file, update all of the variables at the top of the file to match your project.
 
-4. From line `30` onwards, you can configure the packs you want to create and the tokens you want to include in each pack.
-
-5. Run the script to create your packs:
+4. Run the script to mint your NFT:
 
 ```bash
 npx ts-node src/index.ts
