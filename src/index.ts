@@ -14,6 +14,7 @@ const IPFS_URL = "ipfs://QmZGU4nEJKpD5DLhbcTr2fi79ZZatXg59ir1gbaBenP48e"; // The
     const sdk = ThirdwebSDK.fromPrivateKey(PRIVATE_KEY, network);
     const collection = await sdk.getContract(
       NFT_COLLECTION_ADDRESS,
+      // change to "edition" if you are working on ERC-1155 standard. (edition pre-built contract).
       "nft-collection"
     );
 
@@ -21,6 +22,7 @@ const IPFS_URL = "ipfs://QmZGU4nEJKpD5DLhbcTr2fi79ZZatXg59ir1gbaBenP48e"; // The
       name: "My 3D Cube NFT",
       description: "This NFT gets loaded in the Unity game at run time!",
       image: IPFS_URL,
+      // supply: 100, // add this if you are working on ERC-1155 standard. (edition pre-built contract)
     });
 
     console.log("🎉 Successfully minted NFT!");
